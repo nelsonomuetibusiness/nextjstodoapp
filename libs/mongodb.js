@@ -3,12 +3,12 @@ import mongoose from "mongoose";
 
 
 
-const connectMongoDb = () => {
+const connectMongoDb = async () => {
   try {
-    mongoose.connect(process.env.MONGODB_URI);
+    await mongoose.connect(process.env.MONGODB_URI);
     alert("database connected");
   } catch (error){
-    alert(error);
+    
   }
 };
 
